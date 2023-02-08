@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Color(0xff58186F),
+      backgroundColor: Color(0xff58186F),
       resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
@@ -41,7 +41,22 @@ class _LoginPageState extends State<LoginPage> {
                   children: <Widget>[
                     Column(
                       children: [
-                
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: IconButton(
+                              color: Colors.white,
+                              icon: Icon(
+                                Icons.arrow_back_rounded,
+                              ),
+                              iconSize: 35,
+                              onPressed: (() {
+                                Navigator.pop(context);
+                              }),
+                            ),
+                          ),
+                        ),
                         SizedBox(height: 16 * 2),
                         Row(
                           children: [
@@ -56,13 +71,15 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(height: 16 * 2),
                       ],
                     ),
-                            Text(
-                          "LOGIN",
-                          style: TextStyle(fontWeight: FontWeight.bold,
+                    Text(
+                      "LOGIN",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontSize: 20, letterSpacing: 1),
-                        ),
-                         SizedBox(height: 16 * 2),
+                          fontSize: 20,
+                          letterSpacing: 1),
+                    ),
+                    SizedBox(height: 16 * 2),
                     Row(
                       children: [
                         Spacer(),

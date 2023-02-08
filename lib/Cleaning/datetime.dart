@@ -206,8 +206,11 @@ class _DateAndTimeState extends State<DateAndTime> {
           backgroundColor: Color(0xFF6F35A5), //
 
           onPressed: () {
-
-          Navigator.push(context, MaterialPageRoute(builder: (context) => Cleaner(),));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Cleaner(),
+                ));
           },
         ),
       ),

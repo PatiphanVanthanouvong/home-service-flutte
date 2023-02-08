@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:home_service_app/Mainscreen/DrawPage/SettingPage/settingpage.dart';
+import 'package:home_service_app/Mainscreen/DrawPage/servicelist.dart';
 
 import '../Widgets/adslider.dart';
 import '../Widgets/gridservice.dart';
+import 'DrawPage/SettingPage/notification.dart';
 import 'DrawPage/about_us.dart';
 
 class HomePage extends StatefulWidget {
@@ -61,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     iconSize: 40,
                     onPressed: () {
-                      Scaffold.of(context).openDrawer();
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=> NotificationPage(),));
                     },
                   ),
                 ],
@@ -156,26 +158,22 @@ class _HomePageState extends State<HomePage> {
               thickness: 3,
             ),
             ListTile(
-              title: const Text('Favorite'),
+              title: const Text('Service Lists'),
               onTap: () {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pushNamed(context, '/Login');
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ServiceList();
+                    },
+                  ),
+                );
               },
             ),
-            Divider(
-              thickness: 3,
-            ),
-            ListTile(
-              title: const Text('Help center'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pushNamed(context, '/Intro');
-              },
-            ),
+         
               Divider(
               thickness: 3,
             ),

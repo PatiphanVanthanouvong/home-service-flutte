@@ -30,10 +30,10 @@ class _CleaningState extends State<Cleaning> {
   ];
   var routs = [
     DateAndTime(),
-    SettingPage(),
-    HomePage(),
-    HomePage(),
-    SettingPage(),
+     DateAndTime(),
+      DateAndTime(),
+    DateAndTime(),
+    DateAndTime(),
   ];
   @override
   Widget build(BuildContext context) {
